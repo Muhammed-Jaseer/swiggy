@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Swiggy</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Open+Sans:wdth,wght@75,353&display=swap');    
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body, h1, h2, h3, h4, h5{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+
+}
+p{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+ color:rgb(42, 41, 41);
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+    font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+      margin: 0px;
+      
+    }
+
+
+    li {
+      float: left;
+    }
+
+    li>a {
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      padding: 18px 20px;
+      display: block;
+    }
+
+    .navbar {
+      justify-content: space-between;
+      display: flex;
+overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width:100%;
+      z-index: 1;
+      top:0;
+
+    }
+
+    .imglogo {
+      list-style-type: none;
+    transition:transform 2s cubic-bezier(0,.41,.56,.67);
+     
+    }
+.imglogo:hover{
+  transform:rotate(360deg);
+}
+
+    .childnavbar>ul {
+      list-style-type: none;
+    }
+
+    .b {
+      color: darkorange;
+      padding: 3px;
+      font-size: 10px;
+    }
+
+    .other {
+      margin-left: 6%;
+    }
+
+    .childnavbar {
+      margin-right: 10%;
+    }
+
+    .main {
+      margin-left: 10%;
+      margin-right: 10%;
+    
+    }
+    
+    
+    
+
+    .innermain>img {
+      width: 128px;
+      height: auto;
+      
+    }
+
+    .c {
+      font-size: 10px;
+      
+    }
+
+
+    .btn1 {
+      border-radius: 20px;
+      
+      background-color: rgb(187, 200, 211);
+      border: none;
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    .btn2 {
+      border-radius: 20px;
+      background-color: rgb(187, 200, 211);
+      border: none;
+      margin-top: 10px;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .maincontainer {
+
+      height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/12/9/f0a1fd7d-8a00-4f43-9e82-a7db7720eb96_369089.JPG');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+
+      border-radius: 10px;
+    }
+
+    .text-bottom1 {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: left;
+      font-weight: bold;
+      font-size: 16px;
+      padding-left: 8px;
+      
+
+    }
+
+    .gradient-overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+
+    }
+
+    .headingmargin {
+      margin: 0;
+      color: black;
+
+    }
+
+    .contentcard {
+      margin-top: 16px;
+      padding: 8px;
+    }
+
+    .card {
+      width: 300px;
+      overflow: hidden;
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-right: 12px;
+      padding:10px ;
+
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      /* Slight zoom */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    }
+    .parentcard{
+     display:flex;
+      
+    }
+.maincontainer1{
+  height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/7/17/a0201a00-7b99-488e-81a0-fdbd992cca5d_540260.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+
+      border-radius: 10px;
+}
+.maincontainer2{
+  height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/c80d264b1ddbaa9ac91b0d6ac9423663');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px; 
+}
+.maincontainer3{
+   height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/zal9elpswqhxfmpgja8n');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px; 
+
+}
+.filterbtn{
+padding: 10px;
+border-radius:20px ;
+width: 80px;
+border:1px solid rgb(131, 124, 124);
+margin-right: 5px;
+background-color: white;
+}
+.sortbtn{
+padding:10px;
+border-radius:20px ;
+width: 90px;
+border:1px solid rgb(131, 124, 124);
+margin-right: 5px;
+background-color: white;
+}
+.fastbtn{
+padding: 10px;
+border-radius:20px ;
+width: 100px;
+border:1px solid rgb(131, 124, 124);
+margin-right: 5px;
+background-color: white;
+}
+.newbtn{
+padding: 10px;
+border-radius:20px ;
+width: 120px;
+border:1px solid rgb(131, 124, 124);
+margin-right: 5px;
+background-color: white;
+
+}
+.Ratingsbtn{
+padding: 10px;
+border-radius:20px ;
+width: 120px;
+border:1px solid rgb(131, 124, 124);
+margin-right: 5px;
+background-color: white;
+}
+.vegbtn{
+padding: 10px;
+border-radius:20px ;
+width: 80px;
+border:1px solid rgb(131, 124, 124);
+margin-right: 5px;
+background-color: white;
+}
+.offerbtn{
+padding: 10px;
+border-radius:20px ;
+width: 80px;
+border:1px solid rgb(131, 124, 124);
+margin-right: 5px;
+background-color: white;
+}
+.rsbtn{
+padding: 10px;
+border-radius:20px ;
+width: 120px;
+border:1px solid rgb(131, 124, 124);
+margin-right: 5px;
+background-color: white;
+}
+.lessbtn{
+padding: 10px;
+border-radius:20px ;
+width: 130px;
+border:1px solid rgb(131, 124, 124);
+margin-right: 5px;
+background-color: white;
+}
+.card1{
+  width: 300px;
+      overflow: hidden;
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-right: 12px;
+      padding:10px ;
+      margin-top: 50px;
+
+}
+.maincontainer4{
+ height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/f780ed3e2723fa5e0c72b0552962fca7');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px; 
+ }
+ .maincontainer5{
+   height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/pwf8a2sfmqwdnjjmmsoo');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px; 
+ 
+ }
+ .maincontainer6{
+  height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/c80d264b1ddbaa9ac91b0d6ac9423663');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px; 
+ 
+}
+.maincontainer7{
+  height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/7/17/a0201a00-7b99-488e-81a0-fdbd992cca5d_540260.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px; 
+ 
+}
+.card1:hover {
+ transform: scale(1.05);
+      /* Slight zoom */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.maincontainer8{
+height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/a2ab4142513ebf5d1630c2992c7adc21');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px; 
+ 
+}
+.maincontainer9{
+height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/5/26/62f0e873-fd82-48c1-8d49-3e8491b15437_1088327.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px; 
+ 
+}
+.maincontainer10{
+height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/3c3c42ece418605a1396fac8983aabd8');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px; 
+ 
+}
+.maincontainer11{
+height: 200px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/3/17/3dc1838e-2cd7-4926-9e5b-b273d8ad8aff_1064324.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+       
+ 
+}
+  .card2{
+  width: 300px;
+      overflow: hidden;
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-right: 12px;
+      padding:10px ;
+      margin-top: 3px;
+
+  }
+  .card2:hover{
+    transform: scale(1.05);
+      /* Slight zoom */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  </style>
+</head>
+
+<body>
+  <!-- div navbar starting -->
+  <div class="navbar">
+
+    <div class="other">
+
+      <ul>
+        <li style="display: flex;"><img class="imglogo" src="images/logo.jpg" alt="adver"><a href="#"><u><b>Other</b></u> &#11167;</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="childnavbar">
+      <ul>
+        <li><a href="#">&#129482;<b>Swiggy Corporate</b></a></li>
+        <li><a href="#">&#129082;<b>Search</b></a></li>
+        <li><a href="#">&#128483;<b>Offers<sup class="b"><b>NEW</b></sup></b></a></li>
+        <li><a href="#">&#127849;<b>Help</b></a></li>
+        <li><a href="#">&#128100;<b>Sign In</b></a></li>
+        <li><a href="#">&#128092;<b>Cart</b></a></li>
+      </ul>
+    </div>
+
+
+
+  </div>
+
+
+
+
+  <!-- div class main starting -->
+  <div class="main" style="margin-top: 80px;">
+
+
+    <div class="innermain">
+
+      <div style="display: flex; justify-content: space-between;">
+        <div class="c">
+          <h1><b>What's on your mind?</b> </h1>
+        </div>
+
+        <div>
+          <button class="btn1">&#129028;</button>
+          <button class="btn2">&#129030;</button>
+        </div>
+      </div>
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/f1263395-5d4a-4775-95dc-80ab6f3bbd89_shawarma.png">
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Shake.png">
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Biryani.png">
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Orange%20juice.png">
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_Parotta.png">
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_burger.png">
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Noodles.png">
+      <img
+        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Pizzas.png">
+    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/3f2c40d3-96c7-44ce-8b35-aef6ea746cdc_lassi.png">
+      </div>
+    <div style="display: flex; justify-content: space-between;">
+      <div>
+      <h3 style="margin-top:80px ;"><b>Top restaurant chains in Malappuram</b></h3>
+</div>
+    <div style="margin-top: 65px;">
+      <button class="btn1">&#129028;</button>
+          <button class="btn2">&#129030;</button>
+      </div>
+    </div>
+
+   <div class="parentcard">
+    <div class="card">
+    <a href="innerindex.html">
+      <div class="maincontainer">
+        
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+          <b>ITEMS AT ₹59</b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">KFC</h3>
+        <h5 class="headingmargin">&#9733 4.3.20-25 mins<h5>
+            <p style="margin-top: -20px;">Burgers, Fast Food, Rolls & Wraps<br />
+              Perintalmanna Locality...</p>
+            </a>
+            </div>
+      
+  </div>
+<div class="card">
+
+      <div class="maincontainer1">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+          <b>20% OFF UPTO ₹50</b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">Nahdi Kuzhi Mandi</h3>
+        <h5 class="headingmargin">&#9733 4.5.15-20 mins<h5>
+            <p style="margin-top: -20px;">Arabian,Middle Eastern<br />
+              Perintalmanna</p>
+      </div>
+      
+  </div>
+  <div class="card">
+
+      <div class="maincontainer2">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+          <b>ITEMS AT ₹169</b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">Barizta Restaurant</h3>
+        <h5 class="headingmargin">&#9733 4.3.30-35 mins<h5>
+            <p style="margin-top: -20px;">South Indian,Chinese,Kerala,...<br />
+              Bypass Road</p>
+      </div>
+  </div>
+ <div class="card">
+
+      <div class="maincontainer3">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+          <b>₹131 OFF ABOVE ₹449</b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">Mathbaks Arabian Majilis</h3>
+        <h5 class="headingmargin">&#9733 4.4.15-20 mins<h5>
+            <p style="margin-top: -20px;">Chinies,North Indian<br />
+              Perintalmanna Jubilee Bypass</p>
+</div>
+  </div>
+ 
+</div> 
+
+
+  <h3 style="margin-top: 80px;"><b>Restaurants with online food delivery in Malappuram</b><h3>
+<div>
+  <button class="filterbtn">Filter &#9902;</button>
+  <button class="sortbtn">Sort By &#11167;</button>
+  <button class="fastbtn">Fast Delivery</button>
+  <button class="newbtn">New on Swiggy</button>
+  <button class="Ratingsbtn">Ratings 4.0+</button>
+  <button class="vegbtn">Pure Veg</button>
+  <button class="offerbtn">Offers</button>
+  <button class="rsbtn">Rs.300-Rs.600</button>
+  <button class="lessbtn">Less than Rs.300</button>
+
+   </div>
+
+   <div class="parentcard">
+    <div class="card1">
+
+      <div class="maincontainer4">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+          <b>ITEMS AT ₹79</b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">E CFOOD PRODUCT</h3>
+        <h5 class="headingmargin">&#9733 4.1.10-15 mins<h5>
+            <p style="margin-top: -20px;">Indian,Snacks,<br />
+              Perintalmanna</p>
+      </div>
+      
+  </div>
+<div class="card1">
+
+      <div class="maincontainer5">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+        
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">The Big Falooda</h3>
+        <h5 class="headingmargin">&#9733 4.5.20-25 mins<h5>
+            <p style="margin-top: -20px;">Arabian,Beverages,Juices<br />
+              Perintalmanna Locality</p>
+      </div>
+      
+  </div>
+  <div class="card1">
+
+      <div class="maincontainer6">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+          <b>ITEMS AT ₹169</b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">Barizta Restaurant</h3>
+        <h5 class="headingmargin">&#9733 4.3.30-35 mins<h5>
+            <p style="margin-top: -20px;">South Indian,Chinese,Kerala,...<br />
+              Bypass Road</p>
+      </div>
+  </div>
+ <div class="card1">
+
+      <div class="maincontainer7">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+          <b>20% OFF UPTO ₹50</b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">Nahdi Kuzhi Mandi</h3>
+        <h5 class="headingmargin">&#9733 4.5.15-20 mins<h5>
+            <p style="margin-top: -20px;">Arabian,Middle Eastern<br />
+              Perintalmanna</p>
+</div>
+  </div>
+ 
+</div>
+        <div>
+        
+   <div class="parentcard">
+    <div class="card2">
+
+      <div class="maincontainer8">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+          <b>₹131 OFF ABOVE ₹349 </b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">Crosstown</h3>
+        <h5 class="headingmargin">&#9733 4.4.40-45 mins<h5>
+            <p style="margin-top: -20px;">Snacks,Burgers<br />
+              Bypass Road</p>
+      </div>
+      
+  </div>
+<div class="card2">
+
+      <div class="maincontainer9">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+        <b>10% OFF UPTO ₹40</b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">Waffle Date</h3>
+        <h5 class="headingmargin">&#9733 4.7.40-45 mins<h5>
+            <p style="margin-top: -20px;">Sweets,Waffle,Cafe<br />
+              Perintalmanna</p>
+      </div>
+      
+  </div>
+  <div class="card2">
+
+      <div class="maincontainer10">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+          <b>₹65 OFF ABOVE ₹299</b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">FALOODA UNITED</h3>
+        <h5 class="headingmargin">&#9733 4.2.40-45 mins<h5>
+            <p style="margin-top: -20px;">Beverages,Fast Food<br />
+              Vavas Mall</p>
+      </div>
+  </div>
+ <div class="card2">
+
+      <div class="maincontainer11">
+        <div class="gradient-overlay"></div>
+
+        <div class="text-bottom1">
+          <b>10% OFF UPTO ₹40</b>
+        </div>
+      </div>
+
+
+
+
+      <div class="contentcard">
+        <h3 class="headingmargin">Turkish Wraps Doner Club</h3>
+        <h5 class="headingmargin">&#9733 4.2.25-30 mins<h5>
+            <p style="margin-top: -20px;">Cafe<br />
+              Perintalmanna</p>
+</div>
+  </div>
+ 
+</div>
+         </div>
+</div>
+</body>
+
+</html>

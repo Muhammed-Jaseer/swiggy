@@ -1,0 +1,741 @@
+<html>
+<head>
+<title>innerpage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Open+Sans:wdth,wght@75,353&display=swap');    
+   * {
+      box-sizing: border-box;
+    }
+
+    body {
+    font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400px;
+  font-style: normal;
+      margin: 0px;
+      
+    }
+
+
+    li {
+      float: left;
+    }
+
+    li>a {
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      padding: 18px 20px;
+      display: block;
+    }
+
+    .navbar {
+      justify-content: space-between;
+      display: flex;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      width:100%;
+      z-index: 1;
+      top:0;
+
+    }
+
+    .imglogo {
+      list-style-type: none;
+    transition:transform 2s cubic-bezier(0,.41,.56,.67);
+     
+    }
+.imglogo:hover{
+  transform:rotate(360deg);
+}
+
+    .childnavbar>ul {
+      list-style-type: none;
+    }
+
+    .b {
+      color: darkorange;
+      padding: 3px;
+      font-size: 10px;
+    }
+
+    .other {
+      margin-left: 6%;
+    }
+
+    .childnavbar {
+      margin-right: 10%;
+    }
+    .main{
+    padding: 10px;
+    display: flex;
+     margin-left: 25%;
+      margin-right: 25%;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .main > h5:hover{
+      color: red;  
+    }
+    
+    .main2{
+     margin-top:-25px ;
+     margin-left:25%;
+     margin-right:25%;
+
+    }    
+    .main2box{
+     background-color:white;
+width:700px;
+height:150px;
+margin-left:25%;
+margin-top:30px;
+border-radius:15px;
+border:1px solid rgb(131, 124, 124); 
+padding-left:20px;
+text-align:left;    
+box-shadow: 0 10px 20px rgba(97, 94, 94);      
+}
+.underparent{
+display: flex;
+justify-content: space-between;
+margin-left:-20px;
+}
+.underchild{
+margin-top: 30px;
+}
+.btn{
+
+margin-top: 50px;
+
+}
+.btn1{
+border-radius: 20px;
+      
+      background-color: rgb(187, 200, 211);
+      border: none;
+    
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.btn2{
+border-radius: 20px;
+      
+      background-color: rgb(187, 200, 211);
+      border: none;
+      
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.parentsubbox{
+display:flex;
+justify-content: space-between;
+}
+.subbox1{
+  background-color:white;  
+  height:75px;
+  width:50%;
+  border-radius:20px;
+  border:1px solid rgb(131, 124, 124);
+  margin-left:-20px;
+  text-align: left;
+padding-left: 50px;
+font-size: 15px;
+cursor: pointer;
+}
+.subbox2{
+background-color:white;  
+  height:75px;
+  width:50%;
+  border:1px solid rgb(166, 161, 161);
+  border-radius: 20px;
+padding-left: 50px;
+font-size: 15px;
+cursor: pointer;
+}
+.search{
+width:105%;
+background-color: rgb(233, 233, 233);
+height:60px ; 
+border-radius: 10px; 
+text-align: center;
+align-items: center;
+margin-left: -20px;
+padding: 2px;
+display: flex;
+justify-content: space-between;
+color:rgb(136, 128, 128);
+cursor: pointer;
+}
+.bestbox{
+padding: 1px;
+border-radius:30px ;
+width: 100px;
+border:1px solid rgb(131, 124, 124);
+margin-left: 10px;
+background-color: white;
+text-align: center;
+font-size: 12px;
+height: 45px;
+margin-top: 10px;
+cursor: pointer;
+}
+.smallbox{
+  padding: 1px;
+border-radius:30px ;
+width: 100px;
+border:1px solid rgb(131, 124, 124);
+margin-left: -25px;
+background-color: white;
+text-align: center;
+font-size: 12px;
+height: 45px;
+margin-top: 10px;
+cursor: pointer;
+}
+.smallbox2{
+  padding: 1px;
+border-radius:30px ;
+width: 100px;
+border:1px solid rgb(131, 124, 124);
+margin-left: 10px;
+background-color: white;
+text-align: center;
+font-size: 12px;
+height: 45px;
+margin-top: 10px;
+cursor: pointer;
+}
+.imagedeal{
+  margin-top: 10px;
+height: 60px;
+margin-left: -35px;;
+}
+.imageoffer{
+  margin-top: 10px;
+height: 60px;
+margin-left: -35px;
+
+}
+.maincontainer{
+  height: 350px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_292,h_300/TopPicks/GEVZiB2');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 25px;
+      width: 320px;
+      
+}
+.text-bottom1{
+   position:relative;
+      bottom:10%;
+      width: 100%;
+      text-align: left;
+      font-weight: bold;
+      font-size: 16px;
+      padding-left: 12px;
+      color: white;
+      
+      
+     }
+     .card{
+       width: 350px;
+      overflow: hidden;
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-right: 12px;
+      padding:10px ;
+      cursor: pointer;
+      
+     }
+     .btnadd{
+      padding:5px;
+border-radius:10px ;
+width: 90px;
+border:1px solid rgb(131, 124, 124);
+margin-right: 5px;
+background-color:white;
+margin-top: -50px;
+position: relative;
+font-size: 15px;
+border: none;
+left: 70%;
+cursor: pointer;
+color:seagreen;
+
+     }
+ .maincontainer2{
+  height: 350px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_292,h_300/TopPicks2024/173813867E.png');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 20px;
+      width: 320px;  
+
+ } 
+ .card:hover{
+  transform: scale(1.05);
+      /* Slight zoom */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+       border-radius: 20px;
+    }  
+.maincontainer3{
+height: 175px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/7/25/bf247176-6142-4eea-bd04-d0acf186b6f0_f5537093-5d29-4b12-9c71-7935995f15b8.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+      width: 175px;
+      margin-top: 20px;
+       
+}
+.btnadd1{
+  position: absolute;
+      bottom: -5%;
+      width: 55%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      padding-left: 12px;
+      color: seagreen;
+      padding: 8px;
+      margin-left: 40px;
+      cursor: pointer;
+      border-radius:10px ;
+      border: none;
+   
+}
+.insidecard{
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.insidecard:hover{
+    transform: scale(1.05);
+      /* Slight zoom */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+border-radius:10px ;
+border: 1px solid black;
+}
+.maincontainer4{
+height: 175px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/6/16/cb6e9c4a-4de6-4cb4-b549-35db959bf077_e7a57bea-8111-4037-8963-7275075500d2.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+      width: 175px;
+      margin-top: 40px;
+
+}
+.maincontainer5{
+height: 175px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/6/10/8f55edec-e16c-4f68-985d-14a42e617527_f914dbc7-0a64-45c6-8a47-d603467a8776.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+      width: 175px;
+      margin-top: 40px;
+}
+.maincontainer6{
+height: 175px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/6/10/da7b540b-4bcf-4fc5-b764-1d63d4a6e84d_75a88c2c-bc58-4052-ae2f-6eea7e252f1f.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+      width: 175px;
+      margin-top: 40px;
+}
+
+
+
+.maincontainer7{
+height: 175px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/6/10/c94d0023-5eaa-44f3-84bc-95f100530d3d_66f681f9-56e3-4a2f-8cc9-9b7dcf63e145.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+      width: 175px;
+      margin-top: 40px;
+
+}
+
+
+.maincontainer8{
+height: 175px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/4/4/56c5c073-4ac4-4c43-990e-16a558cf3877_87868b65-5a9c-4dd4-8f2e-e47ad6ee57d2.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+      width: 175px;
+      margin-top: 40px;
+
+
+}
+
+
+.maincontainer9{
+height: 175px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/6d8c645fcd7d5368741ccc61933fafed');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+      width: 175px;
+      margin-top: 40px;
+
+}
+
+
+.maincontainer10{
+height: 175px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/866ef0fcc37944827cf419f6d9783d97');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+      width: 175px;
+      margin-top: 40px;
+
+}
+
+
+
+.maincontainer11{
+height: 175px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2025/4/8/10aa0923-fbec-4185-996d-08d1f08f4c14_6e3d80d3-6ef1-4c46-b453-ba3ed706bfb9.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+      width: 175px;
+      margin-top: 40px;
+
+}
+
+
+.maincontainer12{
+height: 175px;
+      background-image: url('https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/5/9/f92325b1-84f8-4e3d-ad6a-2b8bb5a377c2_3876238a-bc22-49ba-b10a-56e8d947b5ac.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      font-family: sans-serif;
+      color: white;
+      border-radius: 10px;
+      width: 175px;
+      margin-top: 40px;
+
+}
+
+
+</style>
+</head>
+<body>
+ 
+    <div class="navbar">
+
+    <div class="other">
+
+      <ul>
+        <li style="display: flex;"><img class="imglogo" src="images/logo.jpg" alt="adver"><a href="#"><u><b>Other</b></u> &#11167;</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="childnavbar">
+      <ul>
+        <li><a href="#">&#129482;<b>Swiggy Corporate</b></a></li>
+        <li><a href="#">&#129082;<b>Search</b></a></li>
+        <li><a href="#">&#128483;<b>Offers<sup class="b"><b>NEW</b></sup></b></a></li>
+        <li><a href="#">&#127849;<b>Help</b></a></li>
+        <li><a href="#">&#128100;<b>Sign In</b></a></li>
+        <li><a href="#">&#128092;<b>Cart</b></a></li>
+      </ul>
+    </div>
+</div>
+
+<div class="main" style="margin-top: 70px;">
+<h5><a href="index.html">Home/</a></h5>
+<h5>Malappuram/</h5>
+<h5>KFC</h5>   
+
+
+</div>
+ 
+<div class="main2">
+    <h1>KFC</h1>
+</div>
+ 
+<div class="main2box">
+  
+<h3><span style="color:green;">&#10026;</span> 4.3(1.8k+ ratings) . ₹400 for two</h3>
+<h4 style="color:rgb(255, 102, 0); margin-top: -10px; "><u>Burgers,FastFood</u></h4>
+<p style="margin-top: -10px;"><b>.Outlet perintalmanna Locality</b></p>
+<p style="margin-top: -5px;"><b>.15-20 mins</b></p>
+</p>
+
+<div class="underparent">
+  <div class="underchild">
+    <h2 >Deals for you</h2>
+  </div>
+  <div class="btn">  
+  <button class="btn1">&#129028;</button>
+ <button class="btn2">&#129030;</button> 
+  </div>
+
+</div>
+<div class="parentsubbox">
+  
+<div class="subbox1" style="display: flex;">
+  <div class="image">
+  <img class="imagedeal" src="images/deal.jpg" alt="adver">
+   </div>
+   <div>
+  <h3 style="margin-top:10px;"><b>items At ₹69</b></h3>
+<p style="margin-top:-10px ; color:rgb(136, 128, 128);"><b>ON SELECT ITEMS |</b></p>
+</div>
+</div>
+
+<div class="subbox2" style="display: flex;" >
+  <div>
+  <img class="imageoffer" src="images/offer.jpg" alt="adver">
+  </div>
+  <div>
+  <h3>50% off Upto ₹80 </h3>
+  <p style="margin-top:-10px ; color:rgb(136, 128, 128);"><b>USE SWIGGYIT</b></p>
+</div>
+</div>
+
+</div>
+
+<p style="margin-left:42% ;margin-top: 8%;">&#9756; M E N U &#9758;</p>
+<div class="search">
+<h3 style="margin-left: 38%;">Search for dishes </h3>
+<p style="padding:10px;"><i class="fa fa-search"></i></p>
+</div>
+<div style="display:flex ; padding:10px ; ">
+  <div class="smallbox"><h4 style="margin-top:-2px; padding: 3px;"><span style="font-size:25px ; color:green;">&#9635;</span></h4></div>
+
+   <div class="smallbox2"><h4 style="margin-top:-2px; padding: 3px;"><span style="font-size:30px ; color:red;">&#128982;</span></h4></div>
+  
+  <div class="bestbox"><h3>Bestseller</h3></div>
+  </div>
+  
+  <div style="display: flex; justify-content: space-between;">
+    <div style="margin-top:35px ;">
+    <h3>Top Picks</h3>
+    </div>
+    <div class="btn">
+        <button class="btn1">&#129028;</button>
+        <button class="btn2">&#129030;</button> 
+  
+      </div> 
+       
+  </div>
+ <div class="parentcard" style="display: flex;"> 
+<div class="card">
+<div class="maincontainer"></div>
+<div class="gradient-overlay"></div>
+
+
+<button class="btnadd"><b>ADD</b></button>
+<div class="text-bottom1">
+₹267.68
+</div>
+
+</div>
+<div class="card">
+<div class="maincontainer2"></div>
+<div class="gradient-overlay"></div>
+
+
+<button class="btnadd"><b>ADD</b></button>
+<div class="text-bottom1" >
+₹334.88
+</div>
+
+</div>
+</div>
+
+  
+<h3 style="margin-top: 80px; margin-left:15px ;"><b>Recommended (3)</b></h3>
+<div class="insidecard"style="display: flex;justify-content: space-between;">
+<div style="margin-top: 50px; margin-left:15px ;">
+  <h3>Indian Spicy Veg Roll</h3>
+   <p style="margin-top: -10px;"><b>₹139</b></p>
+<h3><span style="color:green;">&#9733;</span> 4.9(2)
+<p>Veg special spicy indian sauce and veggie roll</p>
+  </div>
+<div class="maincontainer3">
+<button class="btnadd1"><b>ADD</b></button>
+</div>
+
+</div>
+
+
+
+<div class="insidecard"style="display: flex;justify-content: space-between; margin-top:40px;">
+<div style="margin-top: 60px; margin-left:15px ;">
+  <h3>Gold Edition-Veg Zinger Burger</h3>
+   <p style="margin-top: -10px;"><b>₹267.68</b></p>
+
+<p><b>Our Signature Veg Zinger Dunked in Cheese Sauce<br />
+ in the new Brioche Bun to get your tastebuds tingling</b></p>
+  </div>
+<div class="maincontainer4">
+<button class="btnadd1"><b>ADD</b></button>
+</div>
+
+</div>
+
+<div class="insidecard"style="display: flex;justify-content: space-between; margin-top:60px;">
+<div style="margin-top: 60px; margin-left:15px ;">
+  <h3>Chatpata chana Veg Burger - 2 pc</h3>
+   <p style="margin-top: -10px;"><b>₹334.88</b></p>
+
+<p><b>Try New 2 units of Delicious Channa Burger with a <br />unique Indian Chatpata Twist</b></p>
+  </div>
+<div class="maincontainer5">
+<button class="btnadd1"><b>ADD</b></button>
+</div>
+
+</div>
+
+<div class="insidecard"style="display: flex;justify-content: space-between; margin-top:60px;">
+<div style="margin-top: 60px; margin-left:15px ;">
+  <h3>2 x Chatpata Chana Veg Burger & Fries combo</h3>
+   <p style="margin-top: -10px;"><b>₹269</b></p>
+
+<p><b>Save Rs. 56 on 2 units of New Delicious Channa Burger with <br />a unique Indian Chatpata Twist, Medium French Fries & 2 Dips </b></p>
+  </div>
+<div class="maincontainer6">
+<button class="btnadd1"><b>ADD</b></button>
+</div>
+
+</div>
+
+
+<div class="insidecard"style="display: flex;justify-content: space-between; margin-top:60px;">
+<div style="margin-top: 60px; margin-left:15px ;">
+  <h3>2 x Chatpata Chana Veg Burger & Fries combo</h3>
+   <p style="margin-top: -10px;"><b>₹269</b></p>
+
+<p><b>Save Rs. 56 on 2 units of New Delicious Channa Burger with <br />a unique Indian Chatpata Twist, Medium French Fries & 2 Dips </b></p>
+  </div>
+<div class="maincontainer7">
+<button class="btnadd1"><b>ADD</b></button>
+</div>
+
+</div>
+
+<div class="insidecard"style="display: flex;justify-content: space-between; margin-top:60px;">
+<div style="margin-top: 60px; margin-left:15px ;">
+  <h3>2 x Chatpata Chana Veg Burger & Fries combo</h3>
+   <p style="margin-top: -10px;"><b>₹269</b></p>
+
+<p><b>Save Rs. 56 on 2 units of New Delicious Channa Burger with <br />a unique Indian Chatpata Twist, Medium French Fries & 2 Dips </b></p>
+  </div>
+<div class="maincontainer8">
+<button class="btnadd1"><b>ADD</b></button>
+</div>
+
+</div>
+
+<div class="insidecard"style="display: flex;justify-content: space-between; margin-top:60px;">
+<div style="margin-top: 60px; margin-left:15px ;">
+  <h3>2 x Chatpata Chana Veg Burger & Fries combo</h3>
+   <p style="margin-top: -10px;"><b>₹269</b></p>
+
+<p><b>Save Rs. 56 on 2 units of New Delicious Channa Burger with <br />a unique Indian Chatpata Twist, Medium French Fries & 2 Dips </b></p>
+  </div>
+<div class="maincontainer9">
+<button class="btnadd1"><b>ADD</b></button>
+</div>
+
+</div>
+
+
+<div class="insidecard"style="display: flex;justify-content: space-between; margin-top:60px;">
+<div style="margin-top: 60px; margin-left:15px ;">
+  <h3>2 x Chatpata Chana Veg Burger & Fries combo</h3>
+   <p style="margin-top: -10px;"><b>₹269</b></p>
+
+<p><b>Save Rs. 56 on 2 units of New Delicious Channa Burger with <br />a unique Indian Chatpata Twist, Medium French Fries & 2 Dips </b></p>
+  </div>
+<div class="maincontainer10">
+<button class="btnadd1"><b>ADD</b></button>
+</div>
+
+</div>
+
+<div class="insidecard"style="display: flex;justify-content: space-between; margin-top:60px;">
+<div style="margin-top: 60px; margin-left:15px ;">
+  <h3>2 x Chatpata Chana Veg Burger & Fries combo</h3>
+   <p style="margin-top: -10px;"><b>₹269</b></p>
+
+<p><b>Save Rs. 56 on 2 units of New Delicious Channa Burger with <br />a unique Indian Chatpata Twist, Medium French Fries & 2 Dips </b></p>
+  </div>
+<div class="maincontainer11">
+<button class="btnadd1"><b>ADD</b></button>
+</div>
+
+</div>
+
+
+<div class="insidecard"style="display: flex;justify-content: space-between; margin-top:60px;">
+<div style="margin-top: 60px; margin-left:15px ;">
+  <h3>2 x Chatpata Chana Veg Burger & Fries combo</h3>
+   <p style="margin-top: -10px;"><b>₹269</b></p>
+
+<p><b>Save Rs. 56 on 2 units of New Delicious Channa Burger with <br />a unique Indian Chatpata Twist, Medium French Fries & 2 Dips </b></p>
+  </div>
+<div class="maincontainer12">
+<button class="btnadd1"><b>ADD</b></button>
+</div>
+
+</div>
+</div>
+
+
+</body>
+</html>
